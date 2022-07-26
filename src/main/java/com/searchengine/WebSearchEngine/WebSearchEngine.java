@@ -37,15 +37,17 @@ public class WebSearchEngine {
 
 	public static void searchEngine() {
 
+		Scanner scan = new Scanner(System.in);
 		WebSearchEngine w = new WebSearchEngine();
 		System.out.println("\n*****************CRAWLING STARTED******************");
-		String urlToCrawl = "http://geeksforgeeks.org/";
+//		String urlToCrawl = "http://geeksforgeeks.org/";
+		System.out.println("\n\n Enter the URL you want to crawl\n");
+		String urlToCrawl = scan.nextLine();
 		Crawler.spider(urlToCrawl);
 		System.out.println("\n*****************CRAWLING STOPPED******************");
 		
 		/** occurs to store the frequency of search word in each file. Each entry container <String filename, int frequency>	 */
 		Hashtable<String, Integer> occurrs = new Hashtable<String, Integer>();
-		Scanner scan = new Scanner(System.in);
 		String choice = "y";
 
 		do {
