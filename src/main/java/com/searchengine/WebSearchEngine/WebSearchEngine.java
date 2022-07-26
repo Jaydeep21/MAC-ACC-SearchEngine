@@ -2,11 +2,12 @@ package com.searchengine.WebSearchEngine;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Scanner;
 import java.util.regex.Matcher;
-
+import org.apache.commons.io.FileUtils;
 public class WebSearchEngine {
 
 	static ArrayList<String> key = new ArrayList<String>();
@@ -36,7 +37,13 @@ public class WebSearchEngine {
 	}
 
 	public static void searchEngine() {
+		File dir = new File(System.getProperty("user.dir") + "\\textFiles\\");
 
+		try {
+			FileUtils.cleanDirectory(dir);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
 		Scanner scan = new Scanner(System.in);
 		WebSearchEngine w = new WebSearchEngine();
 		System.out.println("\n*****************CRAWLING STARTED******************");
@@ -60,8 +67,6 @@ public class WebSearchEngine {
 			int pg = 0;
 
 			try {
-				File dir = new File(System.getProperty("user.dir") + "\\textFiles\\");
-
 				File[] fileArray = dir.listFiles();
 				for (int i = 0; i < fileArray.length; i++) {
 					// Searching the word given as an input.
@@ -90,6 +95,7 @@ public class WebSearchEngine {
 				e.printStackTrace();
 			}
 		} while(choice.equals("y"));
+
 		System.out.println("\n***************************************************\n");
 		System.out.println("	:) THANK YOU FOR USING OUR SEARCH ENGINE :)        ");
 		System.out.println("\n***************************************************\n");

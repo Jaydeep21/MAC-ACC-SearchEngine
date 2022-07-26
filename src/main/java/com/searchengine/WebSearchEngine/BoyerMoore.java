@@ -50,7 +50,7 @@ public class BoyerMoore {
         for (int c = 0; c < R; c++)
             right[c] = -1;
         for (int j = 0; j < pat.length(); j++)
-            right[pat.charAt(j)] = j;
+            right[Character.toLowerCase(pat.charAt(j))] = j;
     }
 
     // return offset of first match; N if no match
@@ -61,8 +61,8 @@ public class BoyerMoore {
         for (int i = 0; i <= N - M; i += skip) {
             skip = 0;
             for (int j = M-1; j >= 0; j--) {
-                if (pat.charAt(j) != txt.charAt(i+j)) {
-                    skip = Math.max(1, j - right[txt.charAt(i+j)]);
+                if (Character.toLowerCase(pat.charAt(j)) != Character.toLowerCase(txt.charAt(i+j))) {
+                    skip = Math.max(1, j - right[Character.toLowerCase(txt.charAt(i+j))]);
                     break;
                 }
             }
