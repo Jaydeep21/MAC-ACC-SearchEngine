@@ -78,7 +78,7 @@ public class EditDistance {
 			}
 			reader.close();
 			for(int p = 0; p<WebSearchEngine.key.size(); p++){
-				WebSearchEngine.numbers.put(WebSearchEngine.key.get(p), findEditDistance(p1.toLowerCase(),WebSearchEngine.key.get(p).toLowerCase()));
+				WebSearchEngine.numbers.put(WebSearchEngine.key.get(p), findEditDistance(p1,WebSearchEngine.key.get(p)));
 			}
     	}     
     	catch(Exception e)
