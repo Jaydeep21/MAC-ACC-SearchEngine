@@ -87,6 +87,7 @@ public class WebSearchEngine {
 				else {
 					//Ranking of Web Pages using merge sort 
 					//Collections.sort by default uses merge sort
+					WebSearchEngine.hashing(occurrs, pg);
 					Sorting.pageSort(occurrs,pg);
 				}	
 				System.out.println("\n\n Do you want to continue(y/n)??");
@@ -106,4 +107,18 @@ public class WebSearchEngine {
 	public static void main(String[] args) {
 			WebSearchEngine.searchEngine();		
 	}
+
+	static void hashing(Hashtable<String, Integer> hashtable, Integer page){
+		System.out.println("-----------------------------------------------------------------------------");
+		System.out.printf("| %10s | %20s", "VALUE", "KEY");
+		System.out.println();
+		System.out.println("-----------------------------------------------------------------------------");
+		hashtable.forEach(
+				(k, v) -> {
+					System.out.format("| %10s | %20s ",  v , k);
+					System.out.println();
+				});
+		System.out.println("-----------------------------------------------------------------------------");
+	}
+
 }
