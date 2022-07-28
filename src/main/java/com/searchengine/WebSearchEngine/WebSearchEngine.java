@@ -80,7 +80,7 @@ public class WebSearchEngine {
 				if (pg == 0) {
 					System.out.println("\n\n\n\n\n\n---------------------------------------------------");
 					System.out.println("Given word not found!!");
-					System.out.println("Searching in web for similar words.....");
+					System.out.println("Searching for similar words.....");
 					/* using regex to find similar strings to pattern */
 					SearchWord.altWord(p);
 				} 
