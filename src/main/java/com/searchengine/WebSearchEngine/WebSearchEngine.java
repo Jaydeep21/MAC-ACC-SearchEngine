@@ -37,12 +37,13 @@ public class WebSearchEngine {
 	}
 
 	public static void searchEngine() {
-		File dir = new File(System.getProperty("user.dir") + "\\textFiles\\");
+		File dir = new File(System.getProperty("user.dir") + Constant.FILE_PATH_FOR_WINDOWS);
 
-		try {
-			FileUtils.cleanDirectory(dir);
-		} catch (IOException e) {
-			throw new RuntimeException(e);
+		//			FileUtils.cleanDirectory(dir);
+		for (File f : dir.listFiles()) {
+			if (f.getName().endsWith(".txt")) {
+				f.delete(); // may fail mysteriously - returns boolean you may want to check
+			}
 		}
 		Scanner scan = new Scanner(System.in);
 		WebSearchEngine w = new WebSearchEngine();

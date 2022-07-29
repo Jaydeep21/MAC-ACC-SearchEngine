@@ -54,7 +54,7 @@ public class Crawler {
 	{
 		try {
 			String txt, currentURL;
-			String filePath = System.getProperty("user.dir") + "\\textFiles\\";
+			String filePath = System.getProperty("user.dir") + Constant.FILE_PATH_FOR_WINDOWS;
 			Iterator<String> itr = uniqueLinks.iterator();
 			while(itr.hasNext())
 			{

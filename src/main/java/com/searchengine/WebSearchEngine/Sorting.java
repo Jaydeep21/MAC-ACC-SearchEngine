@@ -26,11 +26,11 @@ public class Sorting {
 		       System.out.println("\n-----------------Web Page Ranking----------------\n");
 		       
 		       int n = 5;
-		       int j = 1;
+		       int j = 0;
 		       System.out.printf( "%-10s %s\n", "Sr. No.", "Name and occurance" );
 		       System.out.println("-------------------------------------------------");
 				while (l.size() > j && n>0){
-					System.out.printf("\n%-10d| %s\n", j, l.get(j));
+					System.out.printf("\n%-10d| %s\n", j+1, l.get(j));
 					j++;
 					n--;
 				}
