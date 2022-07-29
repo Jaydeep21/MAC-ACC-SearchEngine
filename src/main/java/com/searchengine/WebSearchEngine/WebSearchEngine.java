@@ -37,7 +37,7 @@ public class WebSearchEngine {
 	}
 
 	public static void searchEngine() {
-		File dir = new File(System.getProperty("user.dir") + Constant.FILE_PATH_FOR_WINDOWS);
+		File dir = new File(System.getProperty("user.dir") + Constant.FILE_PATH);
 
 		//			FileUtils.cleanDirectory(dir);
 		for (File f : dir.listFiles()) {

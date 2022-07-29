@@ -42,3 +42,7 @@ $ mvn clean install
 - [Abhishek Patel](https://linkedin.com/in/abhishekpatelmc/)
 - [Jaydeep Dharamsey](https://linkedin.com/in/jaydeepdharamsey/)
 - [Raj Manoj Dedhia](https://linkedin.com/in/rajdedhia10/)
+
+
+## Note 
+If you're running this in MAC use filepath as "/testFiles" in Constant.java.
