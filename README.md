@@ -1,9 +1,44 @@
-# Web-Search-Engine
-A Java based Web Search Engine with the following functionalities:
+# Search Engine
 
-- Search word using Boyer Moore algorithm.
-- Ranking web pages using sorting (Merge Sort).
-- Web crawling (Data structure HashSet to ensure unique URLs will be parsed, Regex to ensure all sites within the provided URL will be parsed and not any other).
-- Scrape and parse HTML from a URL , convert and store in a text file.
-- Spell checking using edit distance : All the words with edit distance 1 with the provided search word will be displayed.
-- Data structure HashTable to store the occurrence of the search word in each file.
+> Console based search engine written in Java
+
+## Features
+- Crawler
+- HTML to Text
+- Searching
+- Hashing
+- Spell Check
+- Ranking
+
+> [Presentation](https://github.com/Jaydeep21/MAC-ACC-SearchEngine/blob/master/assets/ACC_Search_Engine_PPT.pdf)
+
+## Flowchart
+
+<img src="https://github.com/Jaydeep21/MAC-ACC-SearchEngine/blob/master/assets/Search_Engine_FLowchart.png"  width="400" height="400">
+
+## Install source code
+
+1. Dependencies
+
+* openjdk >= 8
+* maven > 3
+
+2. Download source code
+
+```
+$ git clone https://github.com/Jaydeep21/MAC-ACC-SearchEngine.git
+$ cd MAC-ACC-SearchEngine
+```
+
+**Build and Run**
+
+```
+$ cd MAC-ACC-SearchEngine
+$ mvn clean install
+### Run WebSearchEngine.java 
+```
+## Our Team
+
+- [Abhishek Patel](https://linkedin.com/in/abhishekpatelmc/)
+- [Jaydeep Dharamsey](https://linkedin.com/in/jaydeepdharamsey/)
+- [Raj Manoj Dedhia](https://linkedin.com/in/rajdedhia10/)
